@@ -237,9 +237,6 @@ class MaxHeapPriorityQueue(MinHeapPriorityQueue):
                 self._swap(i, child)
                 self._downheap(child)
 
-    def __iter__(self):
-        return iter(sorted(self._items, key=self._key, reverse=True))
-
 __doc__ += """
 >>> import random; random.seed(42)
 >>> from priorityqueue import MinHeapPriorityQueue, MaxHeapPriorityQueue
