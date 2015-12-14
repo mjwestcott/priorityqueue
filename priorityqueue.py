@@ -206,7 +206,6 @@ class MinHeapPriorityQueue():
     def __repr__(self):
         return '{}({})'.format(self.__class__.__name__, self._pq)
 
-
 class MaxHeapPriorityQueue(MinHeapPriorityQueue):
     """A locator-based max-oriented priority queue implemented with a binary
     heap, arranged according to a key function.
@@ -274,7 +273,6 @@ Check multiple signs for priority values.
 >>> verify(pq)
 >>> pq = MaxHeapPriorityQueue(items)
 >>> verify_max(pq)
-
 
 Test pop, peek, append, remove, update, __len__, and __contains__ operations.
 >>> items = ['jjjjjjjjjj', 'iiiiiiiii', 'hhhhhhhh',
