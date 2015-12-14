@@ -143,8 +143,8 @@ class MinHeapPriorityQueue():
         self._downheap(i)
 
     def _heapify(self):
-        start = self._parent(len(self) - 1) # start at parent of last leaf
-        for j in range(start, -1, -1):      # going to and includng the root
+        start = self._parent(len(self) - 1) # Start at parent of last leaf
+        for j in range(start, -1, -1):      # going to and includng the root.
             self._downheap(j)
 
     #------------------------------------------------------------------------------
@@ -153,7 +153,7 @@ class MinHeapPriorityQueue():
         """Add an item to the heap"""
         token = self.Locator(self._key(item), item, len(self._pq))
         self._pq.append(token)
-        self._upheap(len(self._pq) - 1) # upheap newly added position
+        self._upheap(len(self._pq) - 1) # Upheap newly added position.
         return token
 
     def update(self, loc, newval, newitem):
