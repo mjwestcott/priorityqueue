@@ -100,7 +100,8 @@ class MinHeapPriorityQueue():
                 self.__class__.__name__,
                 self._value,
                 self._item,
-                self._index)
+                self._index
+            )
 
     #------------------------------------------------------------------------------
     # non-public
