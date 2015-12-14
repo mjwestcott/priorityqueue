@@ -1,6 +1,6 @@
 priorityqueue.py
 
-Priority Queue Implementation with O(logn) Remove Method
+Priority Queue Implementation with a O(logn) Remove Method
 
 This project implements min- amd max-oriented priority queues based on binary
 heaps. I found the need for a priority queue with a O(logn) remove method.
