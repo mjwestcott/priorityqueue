@@ -49,7 +49,16 @@ Usage:
 
     Iterating with 'for item in pq' or iter() will produce the items, not the
     Locator instances used in the internal representation. The items will be
-    generated in their order in the internal heap, not necessarily sorted.
+    generated in sorted order.
+    >>> items = [3, 1, 0, 2, 4]
+    >>> pq = MinHeapPriorityQueue()
+    >>> for item in pq:
+    ...     print(item)
+    0
+    1
+    2
+    3
+    4
 """
 # Inspired by:
 #   - AdaptableHeapPriorityQueue in 'Data Structures and Algorithms in Python'
