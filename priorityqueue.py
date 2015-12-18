@@ -51,7 +51,7 @@ Usage:
     Locator instances used in the internal representation. The items will be
     generated in sorted order.
     >>> items = [3, 1, 0, 2, 4]
-    >>> pq = MinHeapPriorityQueue()
+    >>> pq = MinHeapPriorityQueue(items)
     >>> for item in pq:
     ...     print(item)
     0
