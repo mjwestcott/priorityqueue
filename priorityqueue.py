@@ -201,7 +201,7 @@ class MinHeapPriorityQueue():
         return item in self.items
 
     def __iter__(self):
-        return iter(self.items)
+        return iter(sorted(self.items))
 
     def __repr__(self):
         return '{}({})'.format(self.__class__.__name__, self._pq)
@@ -235,6 +235,9 @@ class MaxHeapPriorityQueue(MinHeapPriorityQueue):
             if self._pq[i] < self._pq[child]:
                 self._swap(i, child)
                 self._downheap(child)
+
+    def __iter__(self):
+        return iter(sorted(self.items, reverse=True))
 
 __doc__ += """
 >>> import random; random.seed(42)
@@ -347,18 +350,22 @@ False
 >>> 998 in pq
 True
 
-Test the items, __iter__, and __repr__ methods.
+Test the items and __repr__ methods.
 >>> items = ['a', 'b', 'c']
 >>> pq = MinHeapPriorityQueue(items)
 >>> pq
 MinHeapPriorityQueue([Locator(value='a', item='a', index=0), Locator(value='b', item='b', index=1), Locator(value='c', item='c', index=2)])
 >>> pq.items == ['a', 'b', 'c']
 True
->>> for x in pq:
-...     print(x)
-a
-b
-c
+
+Check that __iter__ generates items in sorted order.
+>>> items = list(range(1000))
+>>> pq = MinHeapPriorityQueue(items)
+>>> for i, x in enumerate(pq):
+...     assert i == x
+>>> pq = MaxHeapPriorityQueue(items)
+>>> for i, x in enumerate(pq):
+...     assert 999 - i == x
 """
 
 if __name__ == "__main__":
