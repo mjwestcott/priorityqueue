@@ -73,10 +73,12 @@ class MinHeapPriorityQueue():
 
     Operation                   Running Time
     len(P), P.peek()            O(1)
-    P.append(item)              O(logn)
     P.update(loc, value, item)  O(logn)
-    P.remove(loc)               O(logn)
-    P.pop()                     O(logn)
+    P.append(item)              O(logn)*
+    P.pop()                     O(logn)*
+    P.remove(loc)               O(logn)*
+
+    *amortized due to occasional resizing of the underlying python list
     """
 
     def __init__(self, iterable=(), key=lambda x: x):
@@ -221,10 +223,12 @@ class MaxHeapPriorityQueue(MinHeapPriorityQueue):
 
     Operation                   Running Time
     len(P), P.peek()            O(1)
-    P.append(item)              O(logn)
     P.update(loc, value, item)  O(logn)
-    P.remove(loc)               O(logn)
-    P.pop()                     O(logn)
+    P.append(item)              O(logn)*
+    P.pop()                     O(logn)*
+    P.remove(loc)               O(logn)*
+
+    *amortized due to occasional resizing of the underlying python list
     """
     # Override all relevant private methods of MinHeapPriorityQueue
     # with max-oriented versions.
