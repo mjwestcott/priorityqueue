@@ -1,9 +1,9 @@
 priorityqueue.py
 
-Priority Queue Implementation with a O(logn) Remove Method
+Priority Queue Implementation with a O(log n) Remove Method
 
 This project implements min- amd max-oriented priority queues based on binary
-heaps. I found the need for a priority queue with a O(logn) remove method.
+heaps. I found the need for a priority queue with a O(log n) remove method.
 This can't be achieved with any of Python's built in collections including
 the heapq module, so I built my own. The heap is arranged according to a given
 key function.
@@ -26,7 +26,7 @@ Usage:
     Internally, the queue is a list of tokens of type 'Locator', which contain
     the priority value, the item itself, and its current index in the heap.
     The index field is updated whenever the heap is modified. This is what
-    allows us to remove in O(logn). Appending an item returns it's Locator.
+    allows us to remove in O(log n). Appending an item returns it's Locator.
     >>> token = pq.append('a')
     >>> token
     Locator(value=1, item='a', index=0)

@@ -24,11 +24,11 @@ Then we can loop through these x values. For each one:
 The data structure holding the heights was described as a list. But note that
 we are performing max(), append(), and remove() operations on it. A Python list
 will take O(n), O(1) and O(n) time respectively. We can do better using a
-heap-based data structure which operates in O(1), O(logn), and O(logn) time
+heap-based data structure which operates in O(1), O(log n), and O(log n) time
 respectively.
 
-Since we are looping over two x values for each building and performing O(logn)
-operations each time, the algorithm described above will run in O(nlogn) where
+Since we are looping over two x values for each building and performing O(log n)
+operations each time, the algorithm described above will run in O(n log n) where
 n is the number of buildings. The naive implementation using a list will run in
 O(n**2).
 """
